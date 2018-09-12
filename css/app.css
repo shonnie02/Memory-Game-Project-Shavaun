@@ -108,6 +108,7 @@ h1 {
     cursor: pointer;
 }
 
+/*Referenced from www.w3schools */
 .modal {    
     position: absolute;
     z-index: 1000;
@@ -123,14 +124,14 @@ h1 {
 }
 
 
-/* Modal Content/Box */
+/*Referenced from www.w3schools.com */
 .modal-content {
     
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 15% auto; 
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 80%; 
 }
 
 
