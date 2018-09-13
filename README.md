@@ -9,7 +9,7 @@
 
 ## Uploading the Game to Your Computer
 
-The game can be installed onto your computer by simply 
+The game can be installed onto your computer by intially making sure that you are in the "Memory-Game-Project-Shavaun repository. 
 
 ## Contributing
 
