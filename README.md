@@ -1,6 +1,6 @@
 # Memory Game Project for Udacity
 
-  The is the second project for the Udacity Frontend Developer Course. The memory game is similar to the card game, concentration.
+  Thi is the second project for the Udacity Frontend Developer Course. The memory game is similar to the card game, concentration.
   Having a good recall memory is the key factor to being successful and winning the game.
 
 ## Author
