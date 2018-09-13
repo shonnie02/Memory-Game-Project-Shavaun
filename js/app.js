@@ -32,6 +32,7 @@ let star3 = document.querySelector('.star3');
 let openCards = []; //Stores a list of open cards in an array object as they are clicked
 let matchedList = [];
 let matchedPair= 0;
+let totalMatches = 8;
 let moves = 0;
 let stars = 3; //The number of stars begans at 3, and will decrease as the the number of moves increase
 let moveList = []; //Stores a list of moves
@@ -127,7 +128,7 @@ function matchedCards(){
     openCards = [];
     //Need to keep track of matched sets. Need to store in an array. Max number of matches is 8
     matchedPair++;
-    const totalMatches = 8;
+    
     if (matchedPair === totalMatches){
 
         console.log('The game is over');
@@ -239,6 +240,19 @@ function resetMoves(){
 
 }
 
+function resetModal(){
+
+    matchedPair =0;
+        
+    if (matchedPair === totalMatches){
+
+        showModal();
+    }
+
+
+
+}
+
 
 function stopTimer(){
 
@@ -255,20 +269,23 @@ function restartGame(){
    resetMoves();
    resetStars();
    resetTimer();
-   resetCards();    
+   resetCards(); 
+   resetModal();
+
+      
        
  }
 
 
 function resetStars(){ //This reset stars function is from https://matthewcranford.com/?s=memory+game
 
-   stars = 0;
+   stars = 0
    const allStars = document.querySelectorAll('.stars li');
    for (star of allStars){
 
         star.style.display = 'inline';
    }
-   
+   stars = 3;
    }
 
 
@@ -276,13 +293,25 @@ function resetCards(){
 
     for (card of allCards){
 
-        card.classList.remove('open','show','match');
+        card.classList.remove('open','show', 'match');
 
     }
-
+    openCards = [];
+    resetStars();
    }
 
+function newCards(){
 
+    for (card of allCards){
+
+        card.classList.remove('open','show');
+
+    }
+    resetStars();
+
+
+
+}
 
    // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(shuffledCardsArray) {
@@ -318,11 +347,14 @@ function trackMoves(){
 
     if (moves === 16){
         removeStars();
-        stars--; //The value of stars is 2
+        stars --;
+       // stars--; //The value of stars is 2
     } else if (moves === 24){
         removeStars();
-        stars--; //The value of stars is one
-    }
+        stars--;
+       // stars--; //The value of stars is one
+    } else if (moves > 24)
+
     
     //return stars; //This stores the current value of stars (which is = 1 star) to be later used, if necessary
    return stars; 
@@ -334,7 +366,7 @@ function playAgain(){
     yesButton.addEventListener('click', function (event) {
        console.log('The yes button was clicked');
        restartGame();
-       
+        shuffleCards();
     });
     }
 
