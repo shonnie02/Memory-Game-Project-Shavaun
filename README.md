@@ -1,17 +1,15 @@
-# Memory Game Project
+# Memory Game Project for Udacity
 
-## Table of Contents
+  The is the second project for the Udacity Frontend Developer Course. The memory game is similar to the card game, concentration.
+  Having a good recall memory is the key factor to being successful and winning the game.
 
-* [Instructions](#instructions)
-* [Contributing](#contributing)
+## Author
 
-## Instructions
+ Produced by: Shavaun Brandy
 
-The starter project has some HTML and CSS styling to display a static version of the Memory Game project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
+## Uploading the Game to Your Computer
 
-To get started, open `js/app.js` and start building out the app's functionality
-
-For specific, detailed instructions, look at the project instructions in the [Udacity Classroom](https://classroom.udacity.com/me).
+The game can be installed onto your computer by simply 
 
 ## Contributing
 
