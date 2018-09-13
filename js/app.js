@@ -279,7 +279,7 @@ function restartGame(){
 
 function resetStars(){ //This reset stars function is from https://matthewcranford.com/?s=memory+game
 
-   stars = 0
+   stars = 0;
    const allStars = document.querySelectorAll('.stars li');
    for (star of allStars){
 
